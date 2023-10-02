@@ -5,10 +5,10 @@
     animation: selected 0.5s 1;
 }
 @keyframes deselected {
-    from {transform: scale(1.2)}
-    to {transform: scale(1)}
+    from {transform: scale(1.2);box-shadow: 0 0 10px 1px green;}
+    to {transform: scale(1);box-shadow: 0 0 10px 1px red;}
 }
 @keyframes selected {
-    from {transform: scale(1)}
-    to {transform: scale(1.2)}
+    from {transform: scale(1);box-shadow: 0 0 10px 1px red;}
+    to {transform: scale(1.2);box-shadow: 0 0 10px 1px green;}
 }
