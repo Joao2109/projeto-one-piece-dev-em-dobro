@@ -1,0 +1,14 @@
+.botao {
+    animation: deselected 0.5s 1;
+}
+.botao.selecionado {
+    animation: selected 0.5s 1;
+}
+@keyframes deselected {
+    from {transform: scale(1.2)}
+    to {transform: scale(1)}
+}
+@keyframes selected {
+    from {transform: scale(1)}
+    to {transform: scale(1.2)}
+}
