@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         var personagem = document.getElementsByClassName('personagem');
+        var conteudo = document.getElementsByClassName('conteudo');
         var botao = document.getElementsByClassName('botao');
         var index;
         $(function () {
@@ -27,8 +28,12 @@
                     botao[i].classList.remove('selecionado');
                 }
                 $(function () {
-                    $(personagem).slideUp(400);
-                    $(personagem[val]).slideDown(400);
+                    $(personagem).slideUp(400,function(){
+                        $(conteudo).fadeOut(0)
+                    });
+                    $(personagem[val]).slideDown(400,function(){
+                        $(conteudo[val]).fadeIn(0)
+                    });
                 });
                 botao[val].classList.add('selecionado');
             }
