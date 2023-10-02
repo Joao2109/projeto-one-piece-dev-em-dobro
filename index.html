@@ -11,8 +11,29 @@
         <link rel="stylesheet" href="src/css/animations.css">
         <title>Projeto One Piece</title>
     </head>
-    <script src="./src/js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        var personagem = document.getElementsByClassName('personagem');
+        var botao = document.getElementsByClassName('botao');
+        var index;
+        $(function () {
+            $(personagem[2]).slideDown(0);
+        });
+        function select(val) {
+            if (index !== val) {
+                index = val;
+                for (i = 0; i < botao.length; i++) {
+                    personagem[i].classList.remove('selecionado');
+                    botao[i].classList.remove('selecionado');
+                }
+                $(function () {
+                    $(personagem).slideUp(400);
+                    $(personagem[val]).slideDown(400);
+                });
+                botao[val].classList.add('selecionado');
+            }
+        }
+    </script>
     <body>
         <main class="personagens">
             <div class="personagem">
@@ -35,7 +56,7 @@
                         capitão salvar sua vida.</p>
                 </div>
             </div>
-            <div class="personagem selecionado">
+            <div class="personagem">
                 <img class="imagem" src="src/images/personagem-monkey-d-luffy.png" alt="Monkey D. Luffy" />
                 <div class="conteudo">
                     <i class="logo"></i>
