@@ -70,7 +70,7 @@ main::after {
 .botao {
     background: none;
     border: none;
-    border: 1px solid red;
+    box-shadow: 0 0 10px 1px red;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -78,6 +78,6 @@ main::after {
     border-radius: 50%;
 }
 .botao.selecionado {
-    border: 2px solid green;
+    box-shadow: 0 0 10px 1px green;
     transform: scale(1.2);
 }
