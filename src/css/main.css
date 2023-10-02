@@ -68,6 +68,8 @@ main::after {
     right: 0;
 }
 .botao {
+    width: 6vw;
+    aspect-ratio: 1/1;
     background: none;
     border: none;
     box-shadow: 0 0 10px 1px red;
@@ -75,6 +77,8 @@ main::after {
     cursor: pointer;
 }
 .botao img {
+    width: 6vw;
+    aspect-ratio: 1/1;
     border-radius: 50%;
 }
 .botao.selecionado {
