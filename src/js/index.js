@@ -1,7 +1,5 @@
 var personagem;
 var botao;
-var botao;
-var botao;
 function select(val) {
     personagem = document.getElementsByClassName('personagem');
     botao = document.getElementsByClassName('botao');
